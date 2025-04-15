@@ -1,0 +1,12 @@
+<div>
+    <button (click)="onSelectUser()">
+        <!-- Property binding for images -->
+        <!-- <img [src]="'assets/users/' + selectedUser.avatar" [alt]="selectedUser.name" /> -->
+
+        <!-- better approach to get the dyanmic values : using getter  -->
+         <img [src]="imagePath" [alt]="user.name" />
+
+        <span>{{user.name}}</span> 
+    </button> <!-- ✅ Properly closed button tag -->
+</div>
+
