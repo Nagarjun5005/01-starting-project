@@ -4,6 +4,21 @@ import { DUMMY_USERS } from '../../dummy-users';
 
 //genetrate random number from user ---global declarartion
 
+//using type for user
+
+// type User={
+//   id:string;  
+//   avatar:string;
+//   name:string;
+// }
+
+//using interface for user
+interface User{
+  id:string;
+  avatar:string;
+  name:string;
+}
+
 const randomNumber = Math.floor(Math.random() * 5) + 1;
 @Component({
   selector: 'app-user',
@@ -14,11 +29,7 @@ const randomNumber = Math.floor(Math.random() * 5) + 1;
 })
 export class UserComponent {
  
-   @Input({required:true}) user!:{
-      id:string;
-      avatar:string;
-      name:string;
-   }
+   @Input({required:true}) user!:User;
    @Output ()select=new EventEmitter<string>();
 
 
