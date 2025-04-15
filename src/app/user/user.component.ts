@@ -13,10 +13,7 @@ const randomNumber = Math.floor(Math.random() * 5) + 1;
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  //  @Input ({required:true}) id!:string;
-  //  @Input({required:true}) avatar!:string;
-  //  @Input({required:true}) name!:string;
-   //we will convert this input into a object
+ 
    @Input({required:true}) user!:{
       id:string;
       avatar:string;
@@ -24,15 +21,11 @@ export class UserComponent {
    }
    @Output ()select=new EventEmitter<string>();
 
-  //  get imagePath(){
-  //   return 'assets/users/'+this.avatar;
-  //  }
+
   get imagePath(){
     return 'assets/users/'+this.user.avatar;
    }
-  //  onSelectUser(){
-  //     this.select.emit(this.id);
-  //  }
+ 
   onSelectUser(){
     this.select.emit(this.user.id);
  }
