@@ -1,5 +1,5 @@
-<div>
-    <button (click)="onSelectUser()">
+<app-card>
+    <button  (click)="onSelectUser()" [class.active]="selected" >
         <!-- Property binding for images -->
         <!-- <img [src]="'assets/users/' + selectedUser.avatar" [alt]="selectedUser.name" /> -->
 
@@ -8,5 +8,5 @@
 
         <span>{{user.name}}</span> 
     </button> <!-- ✅ Properly closed button tag -->
-</div>
+<app-card/>
 

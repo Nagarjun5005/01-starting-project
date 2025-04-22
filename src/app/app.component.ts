@@ -14,15 +14,11 @@ import { NgFor ,NgIf } from '@angular/common';
 export class AppComponent {
     users=DUMMY_USERS;
     //this is for app-task component
-    // selectedUserId='u1';
     selectedUserId?: string;
-    // selectedUserId?:string;
-
+  
     //this is for app-task component
     get selectedUser(){
       return this.users.find((user)=>user.id===this.selectedUserId)!;
-      console.log(this.selectedUserId);
-      console.log(this.selectedUser);
     }
 
     onSelectUser(id:string){
